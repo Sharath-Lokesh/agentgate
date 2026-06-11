@@ -6,7 +6,7 @@
                  │                                                  │
   synthetic   →  │  ┌───────────┐   executes    ┌───────────────┐  │
   test cases     │  │  Tester    │ ───────────▶ │ Agent-under-  │  │
-  (data/)        │  │ coded agent│  via Test     │ test (refund) │  │
+  (data/)        │  │ coded agent│  via Test     │ test (claims) │  │
                  │  │ (Python SDK)│  Cloud       │ Agent Builder │  │
                  │  └─────┬──────┘               └───────────────┘  │
                  │        │ classify (triage.py)                    │

@@ -18,20 +18,25 @@ suggests a fix for broken automation, and escalates environment problems. Any
 assertion-class failure **blocks deployment** and raises an **Action Center**
 task for human sign-off, so a flawed agent cannot reach production unreviewed.
 
-The demonstrated system under test is a **refund-approval agent** with a known,
-planted policy flaw; AgentGate catches it, blocks the release, routes it to a
-human, and only lets the corrected agent through.
+The demonstrated system under test is an **insurance claims auto-adjudication
+agent** that performs straight-through processing — auto-approving low-value
+claims, routing larger ones to a human adjuster, and denying out-of-policy
+claims. It carries a known, planted flaw; AgentGate catches it, blocks the
+release, routes it to a human, and only lets the corrected agent through.
 
-**Business problem solved:** moving AI-agent quality from a late, manual,
-ungoverned checkpoint into a continuous, intelligent, governed gate — the
-difference between a prototype on a laptop and software running in production.
+**Business problem solved:** in regulated, high-volume domains like insurance,
+banking, and healthcare, an AI agent that wrongly approves a claim, loan, or
+prior-authorisation at scale is a direct financial and regulatory loss.
+AgentGate moves AI-agent quality from a late, manual, ungoverned checkpoint into
+a continuous, intelligent, governed gate — the difference between a prototype on
+a laptop and software running in production.
 
 ## UiPath Components
 
 - **UiPath Studio Web** — authoring environment for the whole solution.
 - **UiPath Test Cloud / Test Manager** — the spine: test cases, test sets,
   execution, results, and evidence.
-- **Agent Builder (low-code agent)** — the agent under test (refund approval).
+- **Agent Builder (low-code agent)** — the agent under test (claims adjudication).
 - **Coded Agent (Python SDK)** — the AgentGate Tester: scenario generation and
   failure-triage logic.
 - **Maestro / Orchestrator** — governs the gate sequence (execute → triage →

@@ -8,7 +8,7 @@ UiPath SDK / Test Cloud / Integration Service are marked TODO and are implemente
 once Labs access is available, so they can be tested against the real tenant.
 
 Flow:
-    load synthetic cases
+    load synthetic claims
       -> (TODO) generate adversarial+functional scenarios via LLM
       -> (TODO) execute each scenario against the agent-under-test via Test Cloud
       -> classify each outcome (triage.py)
@@ -22,7 +22,7 @@ from pathlib import Path
 
 from tester.triage import RunOutcome, classify, gate_decision, Routing
 
-DATA = Path(__file__).resolve().parents[1] / "data" / "refund_requests.json"
+DATA = Path(__file__).resolve().parents[1] / "data" / "claims.json"
 
 
 def load_cases():
@@ -42,7 +42,7 @@ def execute_in_test_cloud(scenario) -> RunOutcome:
     capture its decision + any runtime error. Stub returns the oracle so the
     local pipeline is runnable end-to-end before integration."""
     return RunOutcome(
-        request_id=scenario["request_id"],
+        request_id=scenario["claim_id"],
         expected_decision=scenario["expected_decision"],
         actual_decision=scenario["expected_decision"],  # stub: always "passes"
         error_text="",

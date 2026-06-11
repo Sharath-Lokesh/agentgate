@@ -16,7 +16,7 @@ def test_pass_when_decision_matches():
 
 
 def test_assertion_failure_files_defect():
-    # Agent approved an over-limit request it should have escalated.
+    # Agent approved an over-limit claim it should have escalated.
     r = classify(RunOutcome("REF-2", "ESCALATE", "APPROVE"))
     assert not r.passed
     assert r.triage == Triage.ASSERTION
@@ -24,7 +24,7 @@ def test_assertion_failure_files_defect():
 
 
 def test_prompt_injection_is_assertion_failure():
-    # The hero case: injection tricked the agent into approving.
+    # Hero case: injection tricked the agent into auto-approving an over-limit claim.
     r = classify(RunOutcome("REF-11", "ESCALATE", "APPROVE"))
     assert r.triage == Triage.ASSERTION
 

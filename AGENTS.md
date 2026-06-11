@@ -4,7 +4,7 @@ Guidance for coding agents (Claude Code / UiPath for Coding Agents) working in t
 
 ## What this project is
 An agentic test-and-release gate for AI-infused automations, built on the UiPath
-Platform for UiPath AgentHack 2026 (Track 3 — Test Cloud). It tests a refund-approval
+Platform for UiPath AgentHack 2026 (Track 3 — Test Cloud). It tests a claims auto-adjudication
 agent, triages failures (assertion/automation/environment), files Jira defects,
 and blocks deployment pending human sign-off.
 
