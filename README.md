@@ -2,8 +2,6 @@
 
 **An agentic test-and-release gate for AI-infused automations, built on the UiPath Platform.**
 
-UiPath AgentHack 2026 · Track 3 — UiPath Test Cloud
-
 ---
 
 ## Project Description
@@ -75,7 +73,7 @@ the assistance of a coding agent; see *Coding Agent Usage* below).
 
 ---
 
-## Coding Agent Usage (bonus)
+## Coding Agent Usage 
 
 - **Tool used:** Claude Code (via UiPath for Coding Agents).
 - **How it contributed:** scaffolding the Tester coded agent, authoring the
@@ -84,12 +82,3 @@ the assistance of a coding agent; see *Coding Agent Usage* below).
 - **Evidence:** see `docs/CODING_AGENT.md` for session exports and screenshots;
   the coding-agent output is substantively integrated into the working Tester
   agent in `tester/`.
-
-## Repository Layout
-
-```
-data/    synthetic data generator + generated fixtures (deterministic)
-tester/  AgentGate Tester: triage logic (tested) + agent entrypoint (UiPath)
-tests/   unit tests for the triage/gating logic
-docs/    architecture, test plan, coding-agent evidence
-```
