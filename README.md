@@ -2,8 +2,6 @@
 
 **An agentic test-and-release gate for AI-infused automations, built on the UiPath Platform.**
 
-UiPath AgentHack 2026 · Track 3 — UiPath Test Cloud
-
 ---
 
 ## Project Description
